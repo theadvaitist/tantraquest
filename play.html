@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TantraQuest</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f6f4ef; margin: 40px; color: #333; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h2 { color: #3d3d7a; }
+        .option { margin: 10px 0; }
+        button { background-color: #3d3d7a; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; }
+        button:hover { background-color: #4a4acb; }
+        .feedback { margin-top: 20px; font-size: 1.1em; }
+        .score { font-weight: bold; color: #444; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ block.concept }}</h2>
+        <p><i>Pratijna:</i> {{ block.pratijna }}</p>
+        <hr>
+        <form method="POST">
+            <h4>Select the correct Tantrayukti:</h4>
+            {% for t in block.tantrayuktis %}
+                <div class="option">
+                    <input type="radio" name="tantrayukti" value="{{ t.name }}" required>
+                    <label><b>{{ t.name }}</b>: {{ t.definition }}</label>
+                </div>
+            {% endfor %}
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if feedback %}
+            <div class="feedback">{{ feedback }}</div>
+            {% if not last %}
+                <br><a href="{{ next_url }}"><button>Next ?</button></a>
+            {% else %}
+                <br><a href="{{ url_for('result') }}"><button>View Result</button></a>
+            {% endif %}
+        {% endif %}
+
+        <p class="score">Current Score: {{ score }}</p>
+    </div>
+</body>
+</html>

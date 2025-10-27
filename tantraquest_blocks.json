@@ -1,0 +1,21 @@
+[
+    {
+        "block_id": "TQ_001",
+        "level": 1,
+        "concept": "Employee Motivation",
+        "pratijna": "Motivating employees improves organizational performance.",
+        "descriptions": [
+            {"id": "d1", "text": "Praise linked to competence leads to genuine motivation.", "is_correct": true},
+            {"id": "d2", "text": "Increasing holidays always ensures productivity.", "is_correct": false},
+            {"id": "d3", "text": "Uniform dress code promotes discipline.", "is_correct": false},
+            {"id": "d4", "text": "Constant feedback reduces absenteeism.", "is_correct": false}
+        ],
+        "tantrayuktis": [
+            {"name": "Hetu", "definition": "Reasoning by cause and effect.", "is_correct": true},
+            {"name": "Upamana", "definition": "Reasoning by analogy or comparison.", "is_correct": false},
+            {"name": "Udaharana", "definition": "Reasoning by example.", "is_correct": false}
+        ],
+        "feedback": "Hetu applies because the reasoning connects cause (motivation) and effect (performance).",
+        "points": 10
+    }
+]

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TantraQuest Result</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f0fa; margin: 40px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { color: #3d3d7a; }
+        button { background-color: #3d3d7a; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>?? Game Over!</h1>
+        <h2>Your Final Score: {{ score }} / {{ total * 10 }}</h2>
+        <a href="{{ url_for('index') }}"><button>Play Again</button></a>
+    </div>
+</body>
+</html>
